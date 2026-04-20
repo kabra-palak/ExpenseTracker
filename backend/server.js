@@ -9,7 +9,8 @@ const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
-
+const dns = require("dns").promises;
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 //middlewares to handle cors
 app.use(
     cors({
